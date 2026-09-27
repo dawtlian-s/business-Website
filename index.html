@@ -1,392 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LUXORA Watches | Premium Timepieces</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#12141A; --bg-alt:#181B22; --ivory:#EDE8DD; --muted:#84899467;
+  --muted2:#7D818C; --brass:#B8935B; --brass-soft:#C9A97C; --pine:#2E4139;
+  --pine-soft:#4C7263; --line:rgba(237,232,221,.12);
+  font-family:'Manrope',sans-serif;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth; scroll-padding-top:env(safe-area-inset-top,0px);}
+html,body{height:100%; background:var(--bg); color:var(--ivory); overflow-x:hidden;}
+img,svg{max-width:100%;}
+a{color:inherit; text-decoration:none;}
+h1,h2,h3,h4{font-family:'Fraunces',serif; font-weight:500; line-height:1.05; letter-spacing:-.01em;}
+:focus-visible{outline:2px solid var(--brass); outline-offset:3px;}
+@media (prefers-reduced-motion: reduce){ *{animation-duration:.001ms !important; transition-duration:.001ms !important;} }
 
-    <title>LUXORA Watches | Premium Watches</title>
+.wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
 
-    <link rel="stylesheet" href="style.css">
+/* NAV */
+header{position:sticky; top:0; z-index:50; background:rgba(18,20,26,.86); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); padding-top:env(safe-area-inset-top,0px);}
+.navbar{max-width:1180px; margin:0 auto; padding:20px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px;}
+.logo{font-family:'Fraunces',serif; font-size:1.3rem; font-weight:500; letter-spacing:.02em; white-space:nowrap;}
+.logo span{color:var(--brass); font-weight:300;}
+.nav-links{display:flex; gap:34px; list-style:none;}
+.nav-links a{font-size:.92rem; color:var(--muted2); transition:color .2s;}
+.nav-links a:hover{color:var(--ivory);}
+.nav-icons{display:flex; align-items:center; gap:6px;}
+.nav-icons button{background:none; border:none; color:var(--ivory); font-size:1.05rem; width:38px; height:38px; border-radius:50%; cursor:pointer; position:relative; transition:background .2s;}
+.nav-icons button:hover{background:var(--bg-alt);}
+.cart-count{position:absolute; top:2px; right:2px; background:var(--brass); color:var(--bg); font-size:.6rem; font-weight:700; width:16px; height:16px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Manrope';}
+.menu-toggle{display:none; background:none; border:none; color:var(--ivory); font-size:1.4rem; cursor:pointer;}
+
+/* HERO */
+.hero{max-width:1180px; margin:0 auto; padding:70px 32px 90px; display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:center;}
+.small-title{color:var(--brass); font-size:.78rem; letter-spacing:.14em; margin-bottom:18px; font-weight:600;}
+.hero h1{font-size:clamp(2.6rem,5vw,4.1rem); margin-bottom:22px;}
+.hero > .hero-content > p{color:var(--muted2); max-width:420px; font-size:1.02rem; line-height:1.6; margin-bottom:34px;}
+.hero-buttons{display:flex; gap:16px; flex-wrap:wrap;}
+.btn{display:inline-block; padding:14px 30px; border-radius:2px; font-size:.92rem; font-weight:600; cursor:pointer; border:1px solid transparent; transition:transform .2s, background .2s, border-color .2s;}
+.btn.primary{background:var(--brass); color:#181205;}
+.btn.primary:hover{background:var(--brass-soft); transform:translateY(-1px);}
+.btn.secondary{border-color:var(--line); color:var(--ivory);}
+.btn.secondary:hover{border-color:var(--brass); color:var(--brass);}
+.hero-watch{display:flex; justify-content:center;}
+.dial-wrap{filter:drop-shadow(0 30px 60px rgba(0,0,0,.5));}
+.hand{transform-origin:150px 150px;}
+.hand-hour{animation:spin 43200s linear infinite;}
+.hand-min{animation:spin 3600s linear infinite;}
+.hand-sec{animation:spin 60s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+/* FEATURES */
+.features{border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--bg-alt);}
+.features-inner{max-width:1180px; margin:0 auto; padding:0 32px; display:grid; grid-template-columns:repeat(4,1fr);}
+.feature{padding:34px 20px; text-align:center; border-left:1px solid var(--line);}
+.feature:first-child{border-left:none;}
+.feature span{font-size:1.4rem; display:block; margin-bottom:10px;}
+.feature h3{font-size:.95rem; font-weight:600; font-family:'Manrope'; margin-bottom:4px;}
+.feature p{color:var(--muted2); font-size:.82rem;}
+
+/* SECTION TITLE */
+.section-title{text-align:center; max-width:520px; margin:0 auto 56px;}
+.section-title p{color:var(--brass); font-size:.78rem; letter-spacing:.14em; font-weight:600; margin-bottom:14px;}
+.section-title h2{font-size:2.2rem; margin-bottom:14px;}
+.section-title span{color:var(--muted2); font-size:.96rem;}
+
+/* COLLECTION */
+.collection{padding:110px 0 100px;}
+.products{max-width:1180px; margin:0 auto; padding:0 32px; display:grid; grid-template-columns:repeat(4,1fr); gap:28px;}
+.product-card{border:1px solid var(--line); background:var(--bg-alt); padding:2px; transition:border-color .25s;}
+.product-card:hover{border-color:var(--brass);}
+.product-image{position:relative; aspect-ratio:1/1; display:flex; align-items:center; justify-content:center; background:radial-gradient(circle at 50% 40%, rgba(184,147,91,.14), transparent 70%);}
+.product-image svg{width:62%;}
+.badge{position:absolute; top:14px; left:14px; font-size:.68rem; letter-spacing:.06em; font-weight:700; padding:5px 10px; background:var(--pine); color:var(--ivory); z-index:2;}
+.badge.sale{background:var(--brass); color:#181205;}
+.product-info{padding:22px 20px 24px;}
+.product-info > p{color:var(--muted2); font-size:.76rem; letter-spacing:.05em; margin-bottom:6px;}
+.product-info h3{font-size:1.15rem; margin-bottom:8px;}
+.rating{color:var(--brass); font-size:.82rem; margin-bottom:10px; letter-spacing:1px;}
+.product-info h4{font-family:'Manrope'; font-weight:700; font-size:1.15rem; margin-bottom:16px;}
+.cart-btn{width:100%; padding:12px; background:transparent; border:1px solid var(--line); color:var(--ivory); font-size:.85rem; font-weight:600; cursor:pointer; transition:.2s; font-family:'Manrope';}
+.cart-btn:hover{background:var(--brass); border-color:var(--brass); color:#181205;}
+.cart-btn.added{background:var(--pine); border-color:var(--pine); color:var(--ivory);}
+
+/* ABOUT */
+.about{max-width:1180px; margin:0 auto; padding:100px 32px; display:grid; grid-template-columns:.85fr 1.15fr; gap:64px; align-items:center;}
+.about-image{aspect-ratio:1/1; border:1px solid var(--line); display:flex; align-items:center; justify-content:center; background:var(--bg-alt);}
+.about-image svg{width:55%;}
+.about-content p:first-child{color:var(--brass); font-size:.78rem; letter-spacing:.14em; font-weight:600; margin-bottom:16px;}
+.about-content h2{font-size:2rem; margin-bottom:20px;}
+.about-content > p:nth-of-type(2){color:var(--muted2); line-height:1.7; margin-bottom:30px; max-width:460px;}
+
+/* REVIEWS */
+.reviews{background:var(--bg-alt); padding:100px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+.review-container{max-width:1180px; margin:0 auto; padding:0 32px; display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
+.review{border:1px solid var(--line); padding:30px 26px; background:var(--bg);}
+.review .rating{margin-bottom:16px;}
+.review p{color:#D9D4C8; line-height:1.65; font-size:.95rem; margin-bottom:18px; font-style:italic;}
+.review h4{font-family:'Manrope'; font-size:.85rem; color:var(--muted2); font-weight:600;}
+
+/* NEWSLETTER */
+.newsletter{max-width:680px; margin:0 auto; padding:110px 32px; text-align:center;}
+.newsletter h2{font-size:2rem; margin-bottom:14px;}
+.newsletter > p{color:var(--muted2); margin-bottom:34px;}
+.newsletter form{display:flex; gap:0; border:1px solid var(--line); max-width:420px; margin:0 auto;}
+.newsletter input{flex:1; background:none; border:none; padding:15px 18px; color:var(--ivory); font-family:'Manrope'; font-size:.92rem;}
+.newsletter input::placeholder{color:var(--muted2);}
+.newsletter button{background:var(--brass); border:none; padding:0 24px; font-weight:700; color:#181205; cursor:pointer; font-size:.88rem;}
+.newsletter button:hover{background:var(--brass-soft);}
+.newsletter .confirm{color:var(--pine-soft); font-size:.85rem; margin-top:14px; min-height:1em;}
+
+/* CONTACT */
+.contact{max-width:1180px; margin:0 auto; padding:100px 32px; display:grid; grid-template-columns:1.2fr .8fr; gap:60px; border-top:1px solid var(--line);}
+.contact h2{font-size:2rem; margin:14px 0 16px;}
+.contact > div:first-child > p:first-child{color:var(--brass); font-size:.78rem; letter-spacing:.14em; font-weight:600;}
+.contact > div:first-child > p:last-child{color:var(--muted2); line-height:1.6; max-width:400px;}
+.contact-info p{padding:16px 0; border-bottom:1px solid var(--line); font-size:.95rem; color:#D9D4C8;}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line); padding:44px 32px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; max-width:1180px; margin:0 auto;}
+footer p{color:var(--muted2); font-size:.85rem;}
+.social{color:var(--muted2); font-size:.85rem;}
+
+/* CART DRAWER */
+.overlay{position:fixed; inset:0; background:rgba(0,0,0,.5); opacity:0; pointer-events:none; transition:opacity .3s; z-index:98;}
+.overlay.open{opacity:1; pointer-events:auto;}
+.cart-drawer{position:fixed; top:0; right:0; height:100%; width:min(400px,88vw); background:var(--bg-alt); border-left:1px solid var(--line); z-index:99; transform:translateX(100%); transition:transform .35s cubic-bezier(.4,0,.2,1); display:flex; flex-direction:column; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);}
+.cart-drawer.open{transform:translateX(0);}
+.cart-head{display:flex; justify-content:space-between; align-items:center; padding:24px; border-bottom:1px solid var(--line);}
+.cart-head h3{font-size:1.2rem;}
+.cart-head button{background:none; border:none; color:var(--ivory); font-size:1.3rem; cursor:pointer;}
+.cart-items{flex:1; overflow-y:auto; padding:10px 24px;}
+.cart-item{display:flex; justify-content:space-between; align-items:center; padding:16px 0; border-bottom:1px solid var(--line); gap:10px;}
+.cart-item-name{font-size:.9rem;}
+.cart-item-price{color:var(--muted2); font-size:.82rem;}
+.cart-item button{background:none; border:none; color:var(--muted2); cursor:pointer; font-size:1rem;}
+.cart-empty{color:var(--muted2); text-align:center; padding:60px 20px; font-size:.9rem;}
+.cart-foot{padding:22px 24px; border-top:1px solid var(--line);}
+.cart-total{display:flex; justify-content:space-between; margin-bottom:16px; font-family:'Manrope'; font-weight:700;}
+
+/* RESPONSIVE */
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr; text-align:center; padding-top:50px;}
+  .hero > .hero-content > p{margin-left:auto; margin-right:auto;}
+  .hero-buttons{justify-content:center;}
+  .hero-watch{order:-1;}
+  .about{grid-template-columns:1fr;}
+  .contact{grid-template-columns:1fr;}
+  .products{grid-template-columns:repeat(2,1fr);}
+  .review-container{grid-template-columns:1fr;}
+  .features-inner{grid-template-columns:repeat(2,1fr);}
+  .feature:nth-child(3){border-left:none;}
+}
+@media (max-width:720px){
+  .nav-links{position:fixed; top:0; right:0; height:100%; width:min(280px,80vw); background:var(--bg-alt); flex-direction:column; padding:100px 30px; gap:26px; transform:translateX(100%); transition:transform .3s; border-left:1px solid var(--line); z-index:60;}
+  .nav-links.open{transform:translateX(0);}
+  .menu-toggle{display:block;}
+}
+@media (max-width:520px){
+  .products{grid-template-columns:1fr;}
+  .features-inner{grid-template-columns:1fr;}
+  .feature{border-left:none; border-top:1px solid var(--line);}
+  .feature:first-child{border-top:none;}
+  footer{flex-direction:column; text-align:center;}
+}
+</style>
 </head>
-
 <body>
 
-    <!-- Navigation -->
-    <header>
-        <nav class="navbar">
-
-            <div class="logo">
-                LUXORA<span>WATCHES</span>
-            </div>
-
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#collection">Collection</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-
-            <div class="nav-icons">
-                <button>🔍</button>
-                <button>♡</button>
-                <button>🛒</button>
-            </div>
-
-        </nav>
-    </header>
-
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-
-        <div class="hero-content">
-
-            <p class="small-title">TIMELESS STYLE</p>
-
-            <h1>
-                Time That<br>
-                Defines You.
-            </h1>
-
-            <p>
-                Discover elegant and affordable watches designed
-                for your everyday style.
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#collection" class="btn primary">
-                    Shop Collection
-                </a>
-
-                <a href="#about" class="btn secondary">
-                    Learn More
-                </a>
-            </div>
-
-        </div>
-
-        <div class="hero-watch">
-            <div class="watch-circle">
-                ⌚
-            </div>
-        </div>
-
-    </section>
-
-
-    <!-- Features -->
-    <section class="features">
-
-        <div class="feature">
-            <span>🚚</span>
-            <h3>Free Shipping</h3>
-            <p>On orders over $100</p>
-        </div>
-
-        <div class="feature">
-            <span>🛡️</span>
-            <h3>2-Year Warranty</h3>
-            <p>Quality guaranteed</p>
-        </div>
-
-        <div class="feature">
-            <span>↩️</span>
-            <h3>Easy Returns</h3>
-            <p>30-day return policy</p>
-        </div>
-
-        <div class="feature">
-            <span>🔒</span>
-            <h3>Secure Payment</h3>
-            <p>100% secure checkout</p>
-        </div>
-
-    </section>
-
-
-    <!-- Collection -->
-    <section class="collection" id="collection">
-
-        <div class="section-title">
-
-            <p>OUR COLLECTION</p>
-
-            <h2>Featured Watches</h2>
-
-            <span>
-                Elegant timepieces for every occasion.
-            </span>
-
-        </div>
-
-
-        <div class="products">
-
-            <!-- Product 1 -->
-            <div class="product-card">
-
-                <div class="product-image">
-                    <span class="badge">NEW</span>
-                    <div class="watch-placeholder">⌚</div>
-                </div>
-
-               <div class="product-info">
-
-    <p>Classic Collection</p>
-
-    <h3>Luxora Classic</h3>
-
-    <div class="rating">
-        ★★★★★
+<header>
+  <nav class="navbar">
+    <div class="logo">LUXORA<span>WATCHES</span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#collection">Collection</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-icons">
+      <button aria-label="Search">🔍</button>
+      <button aria-label="Wishlist">♡</button>
+      <button aria-label="Open cart" onclick="toggleCart(true)">🛒<span class="cart-count" id="cartCount">0</span></button>
+      <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()">☰</button>
     </div>
-
-    <h4>$49.99</h4>
-
-    <button
-        class="cart-btn"
-        onclick="addToCart('Luxora Classic', 49.99)">
-        Add to Cart
-    </button>
-
-              
-
-            </div>
-
-
-            <!-- Product 2 -->
-            <div class="product-card">
-
-                <div class="product-image">
-                    <span class="badge sale">SALE</span>
-                    <div class="watch-placeholder">⌚</div>
-                </div>
-
-                <div class="product-info">
-
-                    <p>Modern Collection</p>
-
-                    <h3>Luxora Modern</h3>
-
-                    <div class="rating">
-                        ★★★★★
-                    </div>
-
-                    <h4>$69.99</h4>
-
-                    <button class="cart-btn">
-                        Add to Cart
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <!-- Product 3 -->
-            <div class="product-card">
-
-                <div class="product-image">
-                    <div class="watch-placeholder">⌚</div>
-                </div>
-
-                <div class="product-info">
-
-                    <p>Luxury Collection</p>
-
-                    <h3>Luxora Elite</h3>
-
-                    <div class="rating">
-                        ★★★★★
-                    </div>
-
-                    <h4>$99.99</h4>
-
-                    <button class="cart-btn">
-                        Add to Cart
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <!-- Product 4 -->
-            <div class="product-card">
-
-                <div class="product-image">
-                    <div class="watch-placeholder">⌚</div>
-                </div>
-
-                <div class="product-info">
-
-                    <p>Sport Collection</p>
-
-                    <h3>Luxora Sport</h3>
-
-                    <div class="rating">
-                        ★★★★★
-                    </div>
-
-                    <h4>$59.99</h4>
-
-                    <button class="cart-btn">
-                        Add to Cart
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- About -->
-    <section class="about" id="about">
-
-        <div class="about-image">
-            <div class="big-watch">⌚</div>
-        </div>
-
-        <div class="about-content">
-
-            <p>ABOUT LUXORA</p>
-
-            <h2>
-                Quality Timepieces.<br>
-                Affordable Luxury.
-            </h2>
-
-            <p>
-                At Luxora Watches, we believe that a great watch
-                should be stylish, reliable and accessible.
-                Our collection is carefully selected for people
-                who appreciate quality and timeless design.
-            </p>
-
-            <a href="#collection" class="btn primary">
-                Explore Watches
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- Reviews -->
-    <section class="reviews" id="reviews">
-
-        <div class="section-title">
-
-            <p>CUSTOMER REVIEWS</p>
-
-            <h2>What Our Customers Say</h2>
-
-        </div>
-
-        <div class="review-container">
-
-            <div class="review">
-                <div class="rating">★★★★★</div>
-                <p>
-                    "Beautiful watch and excellent quality.
-                    The price is also very reasonable."
-                </p>
-                <h4>— Alex M.</h4>
-            </div>
-
-            <div class="review">
-                <div class="rating">★★★★★</div>
-                <p>
-                    "The design looks premium and delivery
-                    was very fast."
-                </p>
-                <h4>— Daniel K.</h4>
-            </div>
-
-            <div class="review">
-                <div class="rating">★★★★★</div>
-                <p>
-                    "I love the simple and elegant design.
-                    Definitely recommended."
-                </p>
-                <h4>— Sarah L.</h4>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Newsletter -->
-    <section class="newsletter">
-
-        <h2>Stay Updated</h2>
-
-        <p>
-            Get new arrivals, special offers and exclusive discounts.
-        </p>
-
-        <form>
-            <input
-                type="email"
-                placeholder="Enter your email"
-            >
-
-            <button type="submit">
-                Subscribe
-            </button>
-        </form>
-
-    </section>
-
-
-    <!-- Contact -->
-    <section class="contact" id="contact">
-
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="small-title">TIMELESS STYLE</p>
+    <h1>Time That<br>Defines You.</h1>
+    <p>Discover elegant and affordable watches designed for your everyday style.</p>
+    <div class="hero-buttons">
+      <a href="#collection" class="btn primary">Shop Collection</a>
+      <a href="#about" class="btn secondary">Learn More</a>
+    </div>
+  </div>
+  <div class="hero-watch">
+    <svg class="dial-wrap" width="300" height="300" viewBox="0 0 300 300">
+      <circle cx="150" cy="150" r="140" fill="#181B22" stroke="#B8935B" stroke-width="2"/>
+      <circle cx="150" cy="150" r="118" fill="none" stroke="rgba(237,232,221,.18)" stroke-width="1"/>
+      <g stroke="#EDE8DD" stroke-width="2">
+        <line x1="150" y1="36" x2="150" y2="50"/><line x1="150" y1="250" x2="150" y2="264"/>
+        <line x1="36" y1="150" x2="50" y2="150"/><line x1="250" y1="150" x2="264" y2="150"/>
+      </g>
+      <g stroke="rgba(237,232,221,.4)" stroke-width="1">
+        <line x1="150" y1="44" x2="150" y2="54" transform="rotate(30 150 150)"/>
+        <line x1="150" y1="44" x2="150" y2="54" transform="rotate(60 150 150)"/>
+        <line x1="150" y1="44" x2="150" y2="54" transform="rotate(120 150 150)"/>
+        <line x1="150" y1="44" x2="150" y2="54" transform="rotate(150 150 150)"/>
+        <line x1="150" y1="44" x2="150" y2="54" transform="rotate(210 150 150)"/>
+        <line x1="150" y1="44" x2="150" y2="54" transform="rotate(240 150 150)"/>
+        <line x1="150" y1="44" x2="150" y2="54" transform="rotate(300 150 150)"/>
+        <line x1="150" y1="44" x2="150" y2="54" transform="rotate(330 150 150)"/>
+      </g>
+      <text x="150" y="95" text-anchor="middle" fill="#B8935B" font-family="Fraunces, serif" font-size="14">LUXORA</text>
+      <line class="hand hand-hour" x1="150" y1="150" x2="150" y2="96" stroke="#EDE8DD" stroke-width="4" stroke-linecap="round" transform="rotate(220 150 150)"/>
+      <line class="hand hand-min" x1="150" y1="150" x2="150" y2="70" stroke="#EDE8DD" stroke-width="3" stroke-linecap="round" transform="rotate(85 150 150)"/>
+      <line class="hand hand-sec" x1="150" y1="165" x2="150" y2="64" stroke="#B8935B" stroke-width="1.5" stroke-linecap="round" transform="rotate(310 150 150)"/>
+      <circle cx="150" cy="150" r="5" fill="#B8935B"/>
+    </svg>
+  </div>
+</section>
+
+<section class="features">
+  <div class="features-inner">
+    <div class="feature"><span>🚚</span><h3>Free Shipping</h3><p>On orders over $100</p></div>
+    <div class="feature"><span>🛡️</span><h3>2-Year Warranty</h3><p>Quality guaranteed</p></div>
+    <div class="feature"><span>↩️</span><h3>Easy Returns</h3><p>30-day return policy</p></div>
+    <div class="feature"><span>🔒</span><h3>Secure Payment</h3><p>100% secure checkout</p></div>
+  </div>
+</section>
+
+<section class="collection" id="collection">
+  <div class="section-title">
+    <p>OUR COLLECTION</p>
+    <h2>Featured Watches</h2>
+    <span>Elegant timepieces for every occasion.</span>
+  </div>
+  <div class="products" id="productGrid"></div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-image">
+    <svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="none" stroke="#B8935B" stroke-width="2"/><circle cx="100" cy="100" r="70" fill="none" stroke="rgba(237,232,221,.2)"/><line x1="100" y1="100" x2="100" y2="55" stroke="#EDE8DD" stroke-width="3" stroke-linecap="round"/><line x1="100" y1="100" x2="130" y2="115" stroke="#EDE8DD" stroke-width="2.5" stroke-linecap="round"/><circle cx="100" cy="100" r="4" fill="#B8935B"/></svg>
+  </div>
+  <div class="about-content">
+    <p>ABOUT LUXORA</p>
+    <h2>Quality Timepieces.<br>Affordable Luxury.</h2>
+    <p>At Luxora Watches, we believe that a great watch should be stylish, reliable and accessible. Our collection is carefully selected for people who appreciate quality and timeless design.</p>
+    <a href="#collection" class="btn primary">Explore Watches</a>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="section-title">
+    <p>CUSTOMER REVIEWS</p>
+    <h2>What Our Customers Say</h2>
+  </div>
+  <div class="review-container">
+    <div class="review"><div class="rating">★★★★★</div><p>"Beautiful watch and excellent quality. The price is also very reasonable."</p><h4>— Alex M.</h4></div>
+    <div class="review"><div class="rating">★★★★★</div><p>"The design looks premium and delivery was very fast."</p><h4>— Daniel K.</h4></div>
+    <div class="review"><div class="rating">★★★★★</div><p>"I love the simple and elegant design. Definitely recommended."</p><h4>— Sarah L.</h4></div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <h2>Stay Updated</h2>
+  <p>Get new arrivals, special offers and exclusive discounts.</p>
+  <form id="newsletterForm">
+    <input type="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <p class="confirm" id="newsConfirm"></p>
+</section>
+
+<section class="contact" id="contact">
+  <div>
+    <p>CONTACT US</p>
+    <h2>Let's Talk About Your Next Watch</h2>
+    <p>Have a question about our watches? Our team is ready to help.</p>
+  </div>
+  <div class="contact-info">
+    <p>📧 info@luxorawatches.com</p>
+    <p>📞 +95 9 123 456 789</p>
+    <p>📍 Yangon, Myanmar</p>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">LUXORA<span>WATCHES</span></div>
+  <p>© 2026 Luxora Watches. All Rights Reserved.</p>
+  <div class="social">Facebook · Instagram · TikTok</div>
+</footer>
+
+<div class="overlay" id="overlay" onclick="toggleCart(false); toggleMenu(false)"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-head"><h3>Your Cart</h3><button onclick="toggleCart(false)" aria-label="Close cart">✕</button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Total</span><span id="cartTotal">$0.00</span></div>
+    <button class="btn primary" style="width:100%;text-align:center;" onclick="checkout()">Checkout</button>
+  </div>
+</div>
+
+<script>
+const products = [
+  {id:1,name:'Luxora Classic',collection:'Classic Collection',price:49.99,badge:'NEW'},
+  {id:2,name:'Luxora Modern',collection:'Modern Collection',price:69.99,badge:'SALE'},
+  {id:3,name:'Luxora Elite',collection:'Luxury Collection',price:99.99,badge:null},
+  {id:4,name:'Luxora Sport',collection:'Sport Collection',price:59.99,badge:null},
+];
+
+function watchSVG(){
+  return `<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="none" stroke="#B8935B" stroke-width="1.5"/><circle cx="50" cy="50" r="34" fill="none" stroke="rgba(237,232,221,.25)"/><line x1="50" y1="50" x2="50" y2="26" stroke="#EDE8DD" stroke-width="2" stroke-linecap="round"/><line x1="50" y1="50" x2="66" y2="58" stroke="#EDE8DD" stroke-width="1.5" stroke-linecap="round"/><circle cx="50" cy="50" r="2.5" fill="#B8935B"/></svg>`;
+}
+
+const grid = document.getElementById('productGrid');
+grid.innerHTML = products.map(p => `
+  <div class="product-card">
+    <div class="product-image">
+      ${p.badge ? `<span class="badge ${p.badge==='SALE'?'sale':''}">${p.badge}</span>` : ''}
+      ${watchSVG()}
+    </div>
+    <div class="product-info">
+      <p>${p.collection}</p>
+      <h3>${p.name}</h3>
+      <div class="rating">★★★★★</div>
+      <h4>$${p.price.toFixed(2)}</h4>
+      <button class="cart-btn" onclick="addToCart(${p.id}, this)">Add to Cart</button>
+    </div>
+  </div>
+`).join('');
+
+let cart = [];
+
+function addToCart(id, btn){
+  const product = products.find(p => p.id === id);
+  cart.push(product);
+  renderCart();
+  if(btn){
+    const original = btn.textContent;
+    btn.textContent = 'Added ✓';
+    btn.classList.add('added');
+    setTimeout(()=>{ btn.textContent = original; btn.classList.remove('added'); }, 1200);
+  }
+}
+
+function removeFromCart(index){
+  cart.splice(index,1);
+  renderCart();
+}
+
+function renderCart(){
+  document.getElementById('cartCount').textContent = cart.length;
+  const itemsEl = document.getElementById('cartItems');
+  if(cart.length === 0){
+    itemsEl.innerHTML = '<p class="cart-empty">Your cart is empty.</p>';
+  } else {
+    itemsEl.innerHTML = cart.map((p,i) => `
+      <div class="cart-item">
         <div>
-
-            <p>CONTACT US</p>
-
-            <h2>Let's Talk About Your Next Watch</h2>
-
-            <p>
-                Have a question about our watches?
-                Our team is ready to help.
-            </p>
-
+          <div class="cart-item-name">${p.name}</div>
+          <div class="cart-item-price">$${p.price.toFixed(2)}</div>
         </div>
+        <button onclick="removeFromCart(${i})" aria-label="Remove">✕</button>
+      </div>
+    `).join('');
+  }
+  const total = cart.reduce((s,p) => s + p.price, 0);
+  document.getElementById('cartTotal').textContent = '$' + total.toFixed(2);
+}
 
-        <div class="contact-info">
+function toggleCart(open){
+  document.getElementById('cartDrawer').classList.toggle('open', open);
+  document.getElementById('overlay').classList.toggle('open', open || document.getElementById('navLinks').classList.contains('open'));
+}
 
-            <p>📧 info@luxorawatches.com</p>
-            <p>📞 +95 9 123 456 789</p>
-            <p>📍 Yangon, Myanmar</p>
+function toggleMenu(force){
+  const nav = document.getElementById('navLinks');
+  const open = force !== undefined ? force : !nav.classList.contains('open');
+  nav.classList.toggle('open', open);
+  document.getElementById('overlay').classList.toggle('open', open || document.getElementById('cartDrawer').classList.contains('open'));
+}
 
-        </div>
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
 
-    </section>
+document.getElementById('newsletterForm').addEventListener('submit', e => {
+  e.preventDefault();
+  document.getElementById('newsConfirm').textContent = "You're on the list — thanks for subscribing.";
+  e.target.reset();
+});
 
-
-    <!-- Footer -->
-    <footer>
-
-        <div class="logo">
-            LUXORA<span>WATCHES</span>
-        </div>
-
-        <p>
-            © 2026 Luxora Watches. All Rights Reserved.
-        </p>
-
-        <div class="social">
-            Facebook · Instagram · TikTok
-        </div>
-
-    </footer>
-
-<script src="script.js"></script>
+renderCart();
+</script>
 </body>
 </html>
