@@ -1,304 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Chronos — Premium luxury watches crafted for timeless style.">
-  <title>Chronos | Timeless Luxury Watches</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LUXORA Watches | Premium Watches</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <header class="navbar">
-    <a href="#" class="logo">CHRONOS<span>.</span></a>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#collection">Collection</a>
-      <a href="#about">About</a>
-      <a href="#craftsmanship">Craftsmanship</a>
-      <a href="#contact">Contact</a>
-    </nav>
+            <div class="logo">
+                LUXORA<span>WATCHES</span>
+            </div>
 
-    <a href="#collection" class="nav-btn">Shop Watches</a>
-  </header>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
-  <!-- Hero -->
-  <main>
+            <div class="nav-icons">
+                <button>🔍</button>
+                <button>♡</button>
+                <button>🛒</button>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
     <section class="hero" id="home">
-      <div class="hero-content">
-        <p class="eyebrow">THE ART OF TIME</p>
 
-        <h1>Time,<br><em>Perfected.</em></h1>
+        <div class="hero-content">
 
-        <p class="hero-text">
-          Discover exceptional timepieces designed for those who
-          appreciate precision, heritage, and timeless elegance.
-        </p>
+            <p class="small-title">TIMELESS STYLE</p>
 
-        <div class="hero-buttons">
-          <a href="#collection" class="btn btn-primary">Explore Collection</a>
-          <a href="#about" class="btn btn-outline">Our Story</a>
+            <h1>
+                Time That<br>
+                Defines You.
+            </h1>
+
+            <p>
+                Discover elegant and affordable watches designed
+                for your everyday style.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#collection" class="btn primary">
+                    Shop Collection
+                </a>
+
+                <a href="#about" class="btn secondary">
+                    Learn More
+                </a>
+            </div>
+
         </div>
-      </div>
 
-      <div class="hero-watch">
-        <div class="watch-glow"></div>
-        <img
-          src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=900&q=85"
-          alt="Luxury Chronos wristwatch"
-        >
-      </div>
+        <div class="hero-watch">
+            <div class="watch-circle">
+                ⌚
+            </div>
+        </div>
+
     </section>
 
-    <!-- Stats -->
-    <section class="stats">
-      <div>
-        <strong>25+</strong>
-        <span>Years of Heritage</span>
-      </div>
 
-      <div>
-        <strong>48</strong>
-        <span>Precision Calibers</span>
-      </div>
+    <!-- Features -->
+    <section class="features">
 
-      <div>
-        <strong>120K+</strong>
-        <span>Happy Collectors</span>
-      </div>
+        <div class="feature">
+            <span>🚚</span>
+            <h3>Free Shipping</h3>
+            <p>On orders over $100</p>
+        </div>
 
-      <div>
-        <strong>60</strong>
-        <span>Countries Worldwide</span>
-      </div>
+        <div class="feature">
+            <span>🛡️</span>
+            <h3>2-Year Warranty</h3>
+            <p>Quality guaranteed</p>
+        </div>
+
+        <div class="feature">
+            <span>↩️</span>
+            <h3>Easy Returns</h3>
+            <p>30-day return policy</p>
+        </div>
+
+        <div class="feature">
+            <span>🔒</span>
+            <h3>Secure Payment</h3>
+            <p>100% secure checkout</p>
+        </div>
+
     </section>
+
 
     <!-- Collection -->
-    <section class="collection section" id="collection">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">OUR COLLECTION</p>
-          <h2>Designed to <em>endure.</em></h2>
+    <section class="collection" id="collection">
+
+        <div class="section-title">
+
+            <p>OUR COLLECTION</p>
+
+            <h2>Featured Watches</h2>
+
+            <span>
+                Elegant timepieces for every occasion.
+            </span>
+
         </div>
 
-        <p>
-          Every Chronos watch is created with meticulous attention
-          to detail, combining modern design with traditional
-          watchmaking craftsmanship.
-        </p>
-      </div>
 
-      <div class="watch-grid">
+        <div class="products">
 
-        <article class="watch-card">
-          <div class="watch-image">
-            <span class="tag">NEW</span>
-            <img
-              src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=700&q=80"
-              alt="Aurelius automatic watch"
-            >
-          </div>
+            <!-- Product 1 -->
+            <div class="product-card">
 
-          <div class="watch-info">
-            <div>
-              <h3>Aurelius</h3>
-              <p>Automatic · Steel</p>
+                <div class="product-image">
+                    <span class="badge">NEW</span>
+                    <div class="watch-placeholder">⌚</div>
+                </div>
+
+                <div class="product-info">
+
+                    <p>Classic Collection</p>
+
+                    <h3>Luxora Classic</h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <h4>$49.99</h4>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
             </div>
-            <strong>$2,850</strong>
-          </div>
 
-          <a href="#" class="card-link">Discover →</a>
-        </article>
 
-        <article class="watch-card">
-          <div class="watch-image">
-            <img
-              src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=700&q=80"
-              alt="Nocturne luxury watch"
-            >
-          </div>
+            <!-- Product 2 -->
+            <div class="product-card">
 
-          <div class="watch-info">
-            <div>
-              <h3>Nocturne</h3>
-              <p>Automatic · Leather</p>
+                <div class="product-image">
+                    <span class="badge sale">SALE</span>
+                    <div class="watch-placeholder">⌚</div>
+                </div>
+
+                <div class="product-info">
+
+                    <p>Modern Collection</p>
+
+                    <h3>Luxora Modern</h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <h4>$69.99</h4>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
             </div>
-            <strong>$3,450</strong>
-          </div>
 
-          <a href="#" class="card-link">Discover →</a>
-        </article>
 
-        <article class="watch-card">
-          <div class="watch-image">
-            <span class="tag limited">LIMITED</span>
-            <img
-              src="https://images.unsplash.com/photo-1619134778706-c3c3b1b2c9c7?auto=format&fit=crop&w=700&q=80"
-              alt="Monarch gold watch"
-            >
-          </div>
+            <!-- Product 3 -->
+            <div class="product-card">
 
-          <div class="watch-info">
-            <div>
-              <h3>Monarch</h3>
-              <p>Mechanical · Gold</p>
+                <div class="product-image">
+                    <div class="watch-placeholder">⌚</div>
+                </div>
+
+                <div class="product-info">
+
+                    <p>Luxury Collection</p>
+
+                    <h3>Luxora Elite</h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <h4>$99.99</h4>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
             </div>
-            <strong>$6,900</strong>
-          </div>
 
-          <a href="#" class="card-link">Discover →</a>
-        </article>
 
-      </div>
+            <!-- Product 4 -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <div class="watch-placeholder">⌚</div>
+                </div>
+
+                <div class="product-info">
+
+                    <p>Sport Collection</p>
+
+                    <h3>Luxora Sport</h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <h4>$59.99</h4>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
+
 
     <!-- About -->
-    <section class="about section" id="about">
-      <div class="about-image">
-        <img
-          src="https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?auto=format&fit=crop&w=1000&q=85"
-          alt="Watchmaker working on a mechanical watch"
-        >
-      </div>
+    <section class="about" id="about">
 
-      <div class="about-content">
-        <p class="eyebrow">OUR PHILOSOPHY</p>
-
-        <h2>More than a watch.<br><em>A legacy.</em></h2>
-
-        <p>
-          At Chronos, we believe a watch should do more than tell time.
-          It should capture moments, reflect personality, and become
-          something worth passing down.
-        </p>
-
-        <p>
-          Our master watchmakers combine generations of traditional
-          expertise with contemporary engineering to create timepieces
-          built for a lifetime.
-        </p>
-
-        <a href="#craftsmanship" class="text-link">Discover our craftsmanship →</a>
-      </div>
-    </section>
-
-    <!-- Craftsmanship -->
-    <section class="craftsmanship section" id="craftsmanship">
-      <div class="section-heading centered">
-        <p class="eyebrow">THE CHRONOS STANDARD</p>
-        <h2>Crafted without <em>compromise.</em></h2>
-        <p>
-          From the smallest component to the final polish, every detail
-          is considered.
-        </p>
-      </div>
-
-      <div class="features">
-
-        <div class="feature">
-          <div class="feature-number">01</div>
-          <h3>Swiss Precision</h3>
-          <p>
-            Precision-engineered movements are tested to ensure
-            exceptional accuracy and reliability.
-          </p>
+        <div class="about-image">
+            <div class="big-watch">⌚</div>
         </div>
 
-        <div class="feature">
-          <div class="feature-number">02</div>
-          <h3>Premium Materials</h3>
-          <p>
-            Sapphire crystal, surgical-grade steel, genuine leather,
-            and carefully selected precious metals.
-          </p>
+        <div class="about-content">
+
+            <p>ABOUT LUXORA</p>
+
+            <h2>
+                Quality Timepieces.<br>
+                Affordable Luxury.
+            </h2>
+
+            <p>
+                At Luxora Watches, we believe that a great watch
+                should be stylish, reliable and accessible.
+                Our collection is carefully selected for people
+                who appreciate quality and timeless design.
+            </p>
+
+            <a href="#collection" class="btn primary">
+                Explore Watches
+            </a>
+
         </div>
 
-        <div class="feature">
-          <div class="feature-number">03</div>
-          <h3>Lifetime Care</h3>
-          <p>
-            Every Chronos timepiece is supported by our dedicated
-            service and maintenance program.
-          </p>
+    </section>
+
+
+    <!-- Reviews -->
+    <section class="reviews" id="reviews">
+
+        <div class="section-title">
+
+            <p>CUSTOMER REVIEWS</p>
+
+            <h2>What Our Customers Say</h2>
+
         </div>
 
-      </div>
+        <div class="review-container">
+
+            <div class="review">
+                <div class="rating">★★★★★</div>
+                <p>
+                    "Beautiful watch and excellent quality.
+                    The price is also very reasonable."
+                </p>
+                <h4>— Alex M.</h4>
+            </div>
+
+            <div class="review">
+                <div class="rating">★★★★★</div>
+                <p>
+                    "The design looks premium and delivery
+                    was very fast."
+                </p>
+                <h4>— Daniel K.</h4>
+            </div>
+
+            <div class="review">
+                <div class="rating">★★★★★</div>
+                <p>
+                    "I love the simple and elegant design.
+                    Definitely recommended."
+                </p>
+                <h4>— Sarah L.</h4>
+            </div>
+
+        </div>
+
     </section>
 
-    <!-- CTA -->
-    <section class="cta">
-      <div>
-        <p class="eyebrow">FIND YOUR TIMEPIECE</p>
-        <h2>Your time.<br><em>Your story.</em></h2>
-        <p>
-          Explore the Chronos collection and find the watch
-          that belongs with your journey.
-        </p>
-        <a href="#collection" class="btn btn-primary">Shop the Collection</a>
-      </div>
-    </section>
 
     <!-- Newsletter -->
-    <section class="newsletter" id="contact">
-      <div>
-        <p class="eyebrow">STAY IN TIME</p>
-        <h2>Join the Chronos world.</h2>
+    <section class="newsletter">
+
+        <h2>Stay Updated</h2>
+
         <p>
-          Subscribe for new releases, private events, and stories
-          from the world of fine watchmaking.
+            Get new arrivals, special offers and exclusive discounts.
         </p>
-      </div>
 
-      <form>
-        <input type="email" placeholder="Your email address" required>
-        <button type="submit">Subscribe</button>
-      </form>
+        <form>
+            <input
+                type="email"
+                placeholder="Enter your email"
+            >
+
+            <button type="submit">
+                Subscribe
+            </button>
+        </form>
+
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-main">
-      <div>
-        <a href="#" class="logo">CHRONOS<span>.</span></a>
-        <p>Timeless watches. Exceptional craftsmanship.</p>
-      </div>
 
-      <div class="footer-links">
-        <div>
-          <h4>Explore</h4>
-          <a href="#collection">Collection</a>
-          <a href="#about">Our Story</a>
-          <a href="#craftsmanship">Craftsmanship</a>
-        </div>
+    <!-- Contact -->
+    <section class="contact" id="contact">
 
         <div>
-          <h4>Support</h4>
-          <a href="#">Shipping</a>
-          <a href="#">Warranty</a>
-          <a href="#">Care Guide</a>
+
+            <p>CONTACT US</p>
+
+            <h2>Let's Talk About Your Next Watch</h2>
+
+            <p>
+                Have a question about our watches?
+                Our team is ready to help.
+            </p>
+
         </div>
 
-        <div>
-          <h4>Follow</h4>
-          <a href="#">Instagram</a>
-          <a href="#">Facebook</a>
-          <a href="#">Pinterest</a>
-        </div>
-      </div>
-    </div>
+        <div class="contact-info">
 
-    <div class="footer-bottom">
-      <span>© 2026 Chronos Watches. All rights reserved.</span>
-      <span>Privacy · Terms</span>
-    </div>
-  </footer>
+            <p>📧 info@luxorawatches.com</p>
+            <p>📞 +95 9 123 456 789</p>
+            <p>📍 Yangon, Myanmar</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="logo">
+            LUXORA<span>WATCHES</span>
+        </div>
+
+        <p>
+            © 2026 Luxora Watches. All Rights Reserved.
+        </p>
+
+        <div class="social">
+            Facebook · Instagram · TikTok
+        </div>
+
+    </footer>
 
 </body>
 </html>
